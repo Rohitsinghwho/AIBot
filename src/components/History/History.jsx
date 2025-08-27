@@ -25,7 +25,7 @@ const History = () => {
                             <div className="ChatContainerItems">
                             <div className="ChatContainerText">
                                 <span>You</span>
-                                <p>{msg.userMsg}</p>
+                                <p data-cy="user-message">{msg.userMsg}</p>
                             </div>
                             </div>
                         </div>
