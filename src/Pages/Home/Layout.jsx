@@ -6,7 +6,7 @@ import "./Layout.css"
 import { Outlet } from 'react-router-dom'
 import ChatInput from '../../components/ChatInput/ChatInput'
 const Layout = () => {
-   const  [toggleSidebar,settoggleSidebar]=useState(false);
+   const  [toggleSidebar,settoggleSidebar]=useState(true);
   return (
     <div className='HomePage'>
         <Sidebar isOpen={toggleSidebar} onClose={()=>settoggleSidebar(false)}/>  
