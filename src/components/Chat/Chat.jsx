@@ -13,7 +13,11 @@
     const [showModal,setShowModal]=useState(false);
     const [currentMsgId,setCurrentMsgId]=useState(null);
     const [Feedback,setFeedback]=useState('');
-
+    useEffect(() => {
+    if (message && message.length > 0) {
+      localStorage.setItem("messages", JSON.stringify(message));
+    }
+    }, [message]);
     const handleStarClick=(id,value)=>{
         setCurrentMsgId(id);
         setRating(value);
