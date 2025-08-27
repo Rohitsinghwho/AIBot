@@ -4,6 +4,9 @@ import { useState } from 'react'
 const MessageProvider = ({children}) => {
   const [IsHuman,setIsHuman]=useState(false)
     const [message, setMessage] = useState([]);
+    useEffect(()=>{
+      localStorage.setItem("messages", JSON.stringify(message));
+    },[message]);
     const AddMessage=(userMsg,botRes)=>{
       const newMsg={
         id:Date.now(),
