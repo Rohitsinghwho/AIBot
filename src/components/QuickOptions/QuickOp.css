@@ -1,0 +1,130 @@
+.QuickOpContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    height: 70vh;
+}
+
+.QOpHeading{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.QOpHeading span{
+    font-size: 28px;
+    font-weight: 500;
+    font-family: "Ubuntu";
+}
+.QOpHeading img{
+    height: 69px;
+    width: 65px;
+    box-shadow: -4px 4px 10px 0px #00000026;
+    border-radius: 50px;
+}
+.Op{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: scroll;
+    scrollbar-width: none;
+     -ms-overflow-style: none;
+}
+.Op::-webkit-scrollbar {
+  display: none; 
+}
+.OpTiles{
+    width: 514px;
+    height: 111px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding: 0px 5px;
+    margin: 10px;
+    cursor: pointer;
+}
+.OpTiles>:first-child{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Ubuntu";
+    font-style: bold;
+    color: #000000;
+}
+.OpTiles>:last-child{
+    font-size: 16px;
+    font-weight: 400;
+    color: #00000080;
+}
+
+@media (max-width:1025px){
+    .QuickOpContainer{
+        gap: 50px;
+    }
+}
+
+@media (max-width:769px){
+    .OpTiles{
+        width: 480px;
+        height: 100px;
+    }
+    .OpTiles>:first-child{
+    font-size: 18px;
+   
+}
+.OpTiles>:last-child{
+    font-size: 14px;
+   
+}
+}
+
+@media (max-width:429px){
+    .OpTiles{
+        width: 340px;
+        height: 100px;
+    }
+    .OpTiles>:first-child{
+    font-size: 16px;
+   
+}
+.OpTiles>:last-child{
+    font-size: 13px;
+   
+}
+.QOpHeading span{
+    font-size: 25px;
+   
+}
+.QOpHeading img{
+    height: 65px;
+    width: 60px;
+   
+}
+}
+
+@media (max-width:321px){
+    .OpTiles{
+        width: 280px;
+        height: 100px;
+    }
+    .OpTiles>:first-child{
+    font-size: 16px;
+   
+}
+.OpTiles>:last-child{
+    font-size: 13px;
+   
+}
+.QOpHeading span{
+    font-size: 20px;
+   
+}
+.QOpHeading img{
+    height: 60px;
+    width: 55px;
+   
+}
+}

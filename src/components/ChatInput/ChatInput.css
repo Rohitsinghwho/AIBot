@@ -1,0 +1,87 @@
+
+form{
+    display: flex;
+    justify-content:center;
+    position: fixed;
+    bottom:20px;
+    width: 1042px;
+    align-items: center;
+}
+.ChatInput{
+    width: 800px;
+    padding: 10px;
+    font-size: 20px;
+   font: 400;
+   border: 1px solid grey;
+   border-radius: 5px;
+   outline: none;
+   /* border: none; */
+}
+
+.Chatbtn{
+    width: 20%;
+    /* border:1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+}
+.BtnAsk{
+    width: 74px;
+    height: 41px;
+    border-radius: 5px;
+    background-color: #D7C7F4;
+    font-size: 20px;
+    border: none;
+}
+
+.BtnSave{
+    width: 74px;
+    height: 41px;
+    border-radius: 5px;
+    background-color: #D7C7F4;
+    font-size: 20px;
+    border: none;
+}
+
+@media (max-width:1024px){
+ 
+    .ChatInput{
+        width:500px;
+    }
+}
+
+@media (max-width:429px){
+ 
+    .ChatInput{
+        width:180px;
+    }
+    .Chatbtn{
+        width: 15%;
+    }
+    .BtnAsk{
+        width: 60px;
+        font-size: 18px;
+    }
+    .BtnSave{
+        width: 60px;
+        font-size: 18px;
+    }
+    
+}
+@media (max-width:321px){
+ 
+    .ChatInput{
+        width:160px;
+    }
+    .Chatbtn{
+        width: 12%;
+    }
+    .BtnAsk{
+        width: 50px;
+        font-size: 15px;
+    }
+    .BtnSave{
+        width: 50px;
+        font-size: 15px;
+    }
+    
+}

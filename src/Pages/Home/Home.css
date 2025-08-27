@@ -1,0 +1,9 @@
+.HomeContainer{
+    margin-top: 50px;
+}
+
+@media (max-width:1025px){
+    .HomeContainer{
+        margin-top: 10px;
+    }
+}

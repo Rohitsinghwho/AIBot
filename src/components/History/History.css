@@ -1,0 +1,89 @@
+
+.HistoryChatCon{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 75vh;
+    overflow: scroll;
+    scrollbar-width: none;
+     -ms-overflow-style: none;
+}
+.HistoryChatCon::-webkit-scrollbar{
+    display: none;
+}
+.ChatRatingAD{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid black; */
+    gap:5px;
+}
+.ChatCon{
+    display: flex;
+   
+    gap: 5px;
+}
+.ChatFeedback{
+    display: flex;
+    gap: 2px;
+}
+.ChatFText{
+    font-weight: 700;
+    font-size: 16px;
+}
+.FeedbackMsg{
+    font-size: 16px;
+    font-weight: 400;
+}
+.ChatContainerHistory{
+      width: 1000px;
+    height: 105px;
+    background-color: #D7C7F421;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.ChatContainerHistory img{
+    width: 66px;
+    height: 69px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+}
+
+@media (max-width:1025px){
+    .ChatContainerHistory{
+        width: 700px;
+    }
+}
+
+@media (max-width:769px){
+   
+    .ChatContainerHistory{
+        width: 700px;
+    }
+ 
+}
+@media (max-width:426px){
+ 
+    .ChatContainerHistory{
+        width: 700px;
+    }
+   
+
+}
+@media (max-width:376px){
+
+    .ChatContainerHistory{
+        width: 700px;
+    }
+
+}
+@media (max-width:321px){
+  
+    .ChatContainerHistory{
+        width: 700px;
+    }
+
+}
