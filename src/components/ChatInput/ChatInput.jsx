@@ -17,11 +17,11 @@ const ChatInput = () => {
     setInputMsg(e.target.value)
   }
   const handleSubmit=(e)=>{
-    navigate('/chat')
     e.preventDefault();
     if(inputMsg.trim()==="")return;
-     try {
+    try {
       setLoading(true);
+      navigate('/chat')
       const botResponse=getBotResponse(inputMsg);
        AddMessage(inputMsg,botResponse);
        setInputMsg('');
@@ -40,7 +40,7 @@ const ChatInput = () => {
         onChange={handleMessage}
         className="ChatInput"
         type="text"
-        placeholder="Message Bot AI…"
+        placeholder="Message Bot AI..."
       />
       <div className="Chatbtn">
         <button type="submit" className="BtnAsk">
