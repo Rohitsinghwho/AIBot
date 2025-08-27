@@ -11,7 +11,7 @@ const ChatInput = () => {
 
   const handleSaveMsg=()=>{
     saveMessagetoLocalStorage();
-    alert("Message Saved Successfully!")
+    // alert("Message Saved Successfully!")
   }
   const handleMessage=(e)=>{
     setInputMsg(e.target.value)
@@ -21,10 +21,10 @@ const ChatInput = () => {
     if(inputMsg.trim()==="")return;
     try {
       setLoading(true);
-      navigate('/chat')
       const botResponse=getBotResponse(inputMsg);
-       AddMessage(inputMsg,botResponse);
-       setInputMsg('');
+      AddMessage(inputMsg,botResponse);
+      setInputMsg('');
+      navigate('/chat')
      } catch (error) {
       
      }finally{
