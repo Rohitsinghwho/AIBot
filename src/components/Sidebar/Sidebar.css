@@ -13,7 +13,7 @@
     background-color: white;
 }
 .sidebar{
-     transform: translateX(-100%);
+     transform: translateX(-100%) !important;
 }
 .sidebarHeading{
     height: 47px;

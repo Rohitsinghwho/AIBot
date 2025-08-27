@@ -3,7 +3,6 @@ import "./History.css"
 import "../Chat/Chat.css"
 import Person from "../../assets/logo.png";
 import logo from "../../assets/p.png"
- import { SlLike, SlDislike } from "react-icons/sl";
 const History = () => {
   const  [pastConvo,setPastConv]=useState([]);
   useEffect(()=>{
@@ -12,7 +11,7 @@ const History = () => {
       setPastConv(JSON.parse(messages)||[]);
   },[]);
   return (
-    <section className='HistoryContainer'>
+    <div className='HistoryContainer'>
          <span>Conversation History</span>
          <div>
             <div><span>Today's Chats</span></div>
@@ -25,7 +24,7 @@ const History = () => {
                             <div className="ChatContainerItems">
                             <div className="ChatContainerText">
                                 <span>You</span>
-                                <div data-cy="user-message">{msg.userMsg}</div>
+                                <div >{msg.userMsg}</div>
                             </div>
                             </div>
                         </div>
@@ -74,7 +73,7 @@ const History = () => {
                     ))}
                     </div>
          </div>
-    </section>
+    </div>
   )
 }
 
