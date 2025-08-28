@@ -6,10 +6,11 @@ import logo from "../../assets/p.png"
 import MessageContext from '../../context/MessageContext';
 const History = () => {
   const  [pastConvo,setPastConv]=useState([]);
-  const {message}= useContext(MessageContext);
   useEffect(()=>{
       const messages=localStorage.getItem("messages");
-      setPastConv(JSON.parse(messages));
+      if(messages){
+          setPastConv(JSON.parse(messages));
+      }
   },[]);
   return (
     <div className='HistoryContainer'>
@@ -17,7 +18,7 @@ const History = () => {
          <div>
             <div><span>Today's Chats</span></div>
               <div className="HistoryChatCon">
-                    {message.map((msg) => (
+                    {pastConvo.map((msg) => (
                         <div key={msg.id} className="ChatInner">
                         {/* User message */}
                         <div className="ChatContainer">

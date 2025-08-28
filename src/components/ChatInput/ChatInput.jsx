@@ -11,7 +11,7 @@ const ChatInput = () => {
 
   const handleSaveMsg=()=>{
     saveMessagetoLocalStorage();
-    // alert("Message Saved Successfully!")
+    
   }
   const handleMessage=(e)=>{
     setInputMsg(e.target.value)
