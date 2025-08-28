@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import "./History.css"
 import "../Chat/Chat.css"
 import Person from "../../assets/logo.png";
 import logo from "../../assets/p.png"
 import MessageContext from '../../context/MessageContext';
 const History = () => {
-  const [message]=useContext(MessageContext);
+  const {message}=useContext(MessageContext);
   return (
     <div className='HistoryContainer'>
          <span>Conversation History</span>

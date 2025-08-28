@@ -15,9 +15,7 @@ const Sidebar = ({isOpen,onClose}) => {
             <button className='CloseBtn' onClick={onClose}>X</button>
         </div>
         <Link to='/history'  className='sidebarPastConvoHeading' >
-      
             Past Conversations
-       
         </Link>
         <div className='sidebarPastConvo'>
              
