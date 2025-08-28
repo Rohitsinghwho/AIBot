@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./History.css"
 import "../Chat/Chat.css"
 import Person from "../../assets/logo.png";
 import logo from "../../assets/p.png"
+import MessageContext from '../../context/MessageContext';
 const History = () => {
   const  [pastConvo,setPastConv]=useState([]);
+  const {message}= useContext(MessageContext);
   useEffect(()=>{
       const messages=localStorage.getItem("messages");
-      console.log(JSON.parse(messages))
-      setPastConv(JSON.parse(messages)||[]);
+      setPastConv(JSON.parse(messages));
   },[]);
   return (
     <div className='HistoryContainer'>
@@ -16,7 +17,7 @@ const History = () => {
          <div>
             <div><span>Today's Chats</span></div>
               <div className="HistoryChatCon">
-                    {pastConvo.map((msg) => (
+                    {message.map((msg) => (
                         <div key={msg.id} className="ChatInner">
                         {/* User message */}
                         <div className="ChatContainer">
