@@ -10,9 +10,6 @@ const MessageProvider = ({ children }) => {
       setMessage(JSON.parse(stored));
     }
   }, []);
-  useEffect(() => {
-    localStorage.setItem("messages", JSON.stringify(message));
-  }, [message]);
   const AddMessage = (userMsg, botRes) => {
     const newMsg = {
       id: Date.now(),
@@ -21,7 +18,11 @@ const MessageProvider = ({ children }) => {
       rating: 0,
       feedback: "",
     };
-    setMessage((prev) => [...prev, newMsg]);
+    setMessage(prev=>{
+      const updated=[...prev,newMsg];
+      localStorage.setItem("messages",JSON.stringify(updated));
+      return updated;
+    })
   };
   const updateMessage = (id, updates) => {
     setMessage((prev) =>
