@@ -14,11 +14,11 @@ const Sidebar = ({isOpen,onClose}) => {
             <FaRegEdit size={20} style={{cursor:'pointer'}} />
             <button className='CloseBtn' onClick={onClose}>X</button>
         </div>
-        <a href='/history'  className='sidebarPastConvoHeading' >
-        <div>
+        <Link to='/history'  className='sidebarPastConvoHeading' >
+      
             Past Conversations
-        </div>
-        </a>
+       
+        </Link>
         <div className='sidebarPastConvo'>
              
         </div>
